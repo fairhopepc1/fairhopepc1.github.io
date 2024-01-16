@@ -67,7 +67,36 @@
 			             <span style="display: inline-block; width: 210px;float:right;"><i class="fa fa-apple front-badge"></i><i class="fa fa-windows front-badge"></i><i class="fa fa-chrome front-badge"></i>
              			 </span>
             			</div>
-			
+			<!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "851366048227301");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v18.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
             </div>
         </div>
 </div>
@@ -161,37 +190,7 @@ David Truedale</small></blockquote>
     <input class="btn btn-primary" style=margin-left:40%;margin-top:15px;margin-bottom:15px; type="submit" value="Send">
 </form>
 </div></div>
-	<!-- Messenger Chat Plugin Code -->
-    <div id="fb-root"></div>
-
-    <!-- Your Chat Plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
-
-    <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "851366048227301");
-      chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
-
-    <!-- Your SDK code -->
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v18.0'
-        });
-      };
-
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <footer>
+	    <footer>
         <p>&copy;2018 Fairhope PC - 422 Fairhope Avenue (251) 929-4609 - Website designed by <a href=https://ryan-dunphy.com>Ryan Dunphy</a></p><i class="payment fa fa-cc-amex"></i><i class="payment fa fa-cc-mastercard"></i><i class="payment fa fa-cc-visa"></i>
     </footer>
 </div>
